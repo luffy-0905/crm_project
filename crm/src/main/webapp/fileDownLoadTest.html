@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="${#request.getContextPath()}+'/'">
+    <meta charset="UTF-8">
+    <title>演示文件下载</title>
+    <script type="text/javascript" src="jquery/jquery-1.11.1-min.js"></script>
+    <script type="text/javascript" >
+        $(function () {
+            //给下载按钮添加事件
+            $("#fileDownLoad").click(function () {
+                //文件的下载只能同步请求
+                window.location.href="workbench/activity/fileDownload.do";
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="下载" id="fileDownLoad">
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="${#request.getContextPath()}+'/'">
+    <meta charset="UTF-8">
+    <title>演示文件上传</title>
+</head>
+<body>
+<!--文件的上传只能用post，，编码格式只能采用：multipart/form-date-->
+<form action="workbench/activity/fileUpLoad.do" method="post" enctype="multipart/form-data">
+    <input type="file" name="myFile"><br>
+    <input type="text" name="userName"><br>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
